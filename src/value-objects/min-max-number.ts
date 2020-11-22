@@ -27,12 +27,14 @@ export class MinMaxNumber implements MinMaxNumberValue {
     getMaximumValue(): number {
         return this.maximumValue;
     }
+
     setMinimumValue(minimumValue: number): void {
-        if (minimumValue > this.getMinimumValue()) {
+        if (minimumValue > this.getMaximumValue()) {
             throw new Error('Minimum value can not be bigger than maximum value');
         }
         this.minimumValue = minimumValue;
     }
+
     getMinimumValue(): number {
         return this.minimumValue;
     }
