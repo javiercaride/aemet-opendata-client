@@ -10,10 +10,10 @@ export class AemetOpendata implements AemetOpendataClient {
         this.apikey = apikey;
     }
 
-    setApikey(apikey: string): void {
+    public setApikey(apikey: string): void {
         this.apikey = apikey;
     }
-    getApikey(): string {
+    public getApikey(): string {
         return this.apikey;
     }
 }
