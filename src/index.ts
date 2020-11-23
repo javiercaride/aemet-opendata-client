@@ -1,4 +1,5 @@
 export { AemetOpendataClient, AemetOpendata } from './aemet-opendata';
-export { MinMaxNumberValue, MinMaxNumber } from './value-objects/min-max-number';
+export { MinMaxMeasureValue, MinMaxMeasure } from './value-objects/min-max-measure';
 export { WindValue, Wind } from './value-objects/wind';
-export { PeriodValues, Period } from './value-objects/period-values';
+export { ConditionsValues, Conditions } from './value-objects/conditions';
+export { DetailedDailyForecastValue, DetailedDailyForecast } from './forecast/daily/detailed-daily-forecast';

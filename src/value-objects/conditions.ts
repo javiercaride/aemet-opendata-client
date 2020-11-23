@@ -1,6 +1,6 @@
 import { Wind } from './wind';
 
-export interface PeriodValues {
+export interface ConditionsValues {
     getPrecipitationProbability(): number;
     setPrecipitationProbability(precipitationProbability: number): void;
     getSnowLevel(): number;
@@ -19,9 +19,10 @@ export interface PeriodValues {
     setHumidity(humidity: number): void;
 }
 
-export class Period implements PeriodValues {
+export class Conditions implements ConditionsValues {
     public static maxProbabilityAllowedValue = 100;
     public static maxHumidityAllowedValue = 100;
+
     private precipitationProbability!: number;
     private snowLevel!: number;
     private skyCondition!: string;
@@ -36,7 +37,7 @@ export class Period implements PeriodValues {
     }
 
     setPrecipitationProbability(precipitationProbability: number): void {
-        if (precipitationProbability > Period.maxProbabilityAllowedValue) {
+        if (precipitationProbability > Conditions.maxProbabilityAllowedValue) {
             throw new Error('Probability measure can not be greater than 100');
         }
 
@@ -100,7 +101,7 @@ export class Period implements PeriodValues {
     }
 
     setHumidity(humidity: number): void {
-        if (humidity > Period.maxHumidityAllowedValue) {
+        if (humidity > Conditions.maxHumidityAllowedValue) {
             throw new Error('Humidity can not be greater than 100');
         }
 

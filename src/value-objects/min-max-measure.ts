@@ -1,11 +1,11 @@
-export interface MinMaxNumberValue {
+export interface MinMaxMeasureValue {
     setMaximumValue(maximumValue: number): void;
     getMaximumValue(): number;
     setMinimumValue(minimumValue: number): void;
     getMinimumValue(): number;
 }
 
-export class MinMaxNumber implements MinMaxNumberValue {
+export class MinMaxMeasure implements MinMaxMeasureValue {
     private minimumValue: number;
     private maximumValue: number;
 
