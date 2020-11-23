@@ -18,7 +18,7 @@ export abstract class CommonDailyForecast {
         this.temperatureRange = temperatureRange;
     }
 
-    public getTempreatureRange(): MinMaxMeasure {
+    public getTemperatureRange(): MinMaxMeasure {
         return this.temperatureRange;
     }
 

@@ -9,7 +9,7 @@ test('Uninitialized forecast', () => {
     expect(dailyForecast.getEveningConditions()).toBeUndefined();
     expect(dailyForecast.getNightConditions()).toBeUndefined();
     expect(dailyForecast.getFeelsLikeRange()).toBeUndefined();
-    expect(dailyForecast.getTempreatureRange()).toBeUndefined();
+    expect(dailyForecast.getTemperatureRange()).toBeUndefined();
     expect(dailyForecast.getUvRadiationMaxValue()).toBeUndefined();
     expect(dailyForecast.getHumidityRange()).toBeUndefined();
 });
@@ -20,5 +20,7 @@ test('Set temperature range', () => {
 
     dailyForecast.setTemperatureRange(temperatureRange);
 
-    expect(dailyForecast.getTempreatureRange()).toBeInstanceOf(MinMaxMeasure);
+    expect(dailyForecast.getTemperatureRange()).toBeInstanceOf(MinMaxMeasure);
+    expect(dailyForecast.getTemperatureRange().getMaximumValue()).toBe(20);
+    expect(dailyForecast.getTemperatureRange().getMinimumValue()).toBe(10);
 });
